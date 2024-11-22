@@ -1,0 +1,163 @@
+/* .container{
+width: 40%;
+background-color: aquamarine;
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+}
+
+
+.card{
+width: 450px;
+height: 350px;
+}
+
+.card-header{
+  background-color: #a04949;
+  height: 20px;
+}
+
+.card-header h2{
+  text-align: right;
+}
+.card-body{
+
+}
+
+.card-footer{
+height: 30px;
+background-color: coral;
+}
+button{
+  background-color: #a04949;
+} */
+
+
+/* General Styles */
+/* body {
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+} */
+
+h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: #521e1e;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card Styles */
+.Card {
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  overflow: hidden;
+}
+
+/* Card Header */
+.card-header {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+}
+
+.card-header img {
+  border-radius: 50%;
+  margin-right: 10px;
+  width: 50px; /* Increased size for logo */
+  height: 50px;
+}
+
+.card-header h2 {
+  font-size: 18px;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Card Body */
+.card-body {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+}
+
+.card-body .left {
+  width: 70%; /* Adjusted width */
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-body .left span {
+  margin-bottom: 8px;
+}
+
+.card-body .left label {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.card-body .right {
+  width: 30%; /* Adjusted width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-body .right img {
+  border-radius: 10%;
+  width: 100%;
+  height: auto;
+  object-fit: fill;
+  border: 2px solid #007bff;
+}
+
+/* Card Footer */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+.card-footer span {
+  width: 48%; /* Ensure spans are side-by-side */
+  text-align: left;
+}
+
+.card-footer button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px; /* Add spacing between buttons */
+}
+
+.card-footer button:last-child {
+  margin-right: 0; /* Remove margin for the last button */
+}
+
+.card-footer button:hover {
+  background-color: #0056b3;
+}

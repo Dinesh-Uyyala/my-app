@@ -1,0 +1,8 @@
+.row{
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+h1{
+  text-align: center;
+}

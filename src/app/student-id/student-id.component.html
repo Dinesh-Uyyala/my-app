@@ -1,0 +1,30 @@
+<h1>Students ID Card</h1>
+
+<div class="container">
+    <div class="Card" *ngFor="let student of students">
+      <div class="card-header">
+        <img src="{{student.school_logo}}" alt="">
+        <h2>{{student.school_name}}</h2>
+      </div>
+      <div class="card-body">
+        <div class="left">
+          <span><label>Name:</label>{{student.name}}</span>
+          <span><label>Phone:</label>{{student.phone}}</span>
+          <span><label>DoB:</label>{{student.dob | date}}</span>
+          <span><label>City:</label>{{student.city}}</span>
+          <span><label>Email:</label>{{student.email}}</span>
+        </div>
+        <div class="right">
+          <img src="{{student.profile_picture}}" width="30px">
+        </div>
+      </div>
+      <div class="card-footer">
+        <span> <label for="">School City:</label>{{student.school_city}}</span>
+        <span> <label for="">School Pin:</label>{{student.school_pin}}</span><br>        <span></span>
+        <br>
+        <button>View</button>
+        <button (click)="edit()">Edit</button>
+        <button (click)="delete()">Delete</button>
+      </div>
+    </div>
+</div>

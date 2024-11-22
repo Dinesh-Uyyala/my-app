@@ -40,14 +40,15 @@ Angular Project Setup
   npm install -g @angular/cli@15
   ceck : ng version
 
-3 Create angular application
-    select directory : cd Desktop
-    create new project : ng new my-app
-    cd my-app
+      <!-- Create angular application
+          select directory : cd Desktop
+          create new project : ng new my-app
+          cd my-app -->
+ 3 in vscode start the server         
     ng serve
     open browser : http://localhost:4200
 
-    2> if not running open powershell in administrator and run
+    2> if not running open powershell as administrator
       set-executionPolicy unrestricted
 
 
@@ -55,5 +56,95 @@ Angular Project Setup
 
 Project Hierarchy:
 =================
+
+
+Directives: Useful to alter the DOM
+==========
+1) STructural Directives:
+    *ngFor, *ngIf
+
+
+2) Attribut Directives:
+    ngStyle, ngClass
+
+Pipies: Useful to alter the data format.
+================
+
+|date
+|json
+<!-- 1) DatePipe
+2) JsonPipe
+3) UpperCasePipe
+4) LowerCasePipe
+5) DecimalPipe
+6) CurrencyPipe
+7) PercentPipe
+8) SlicePipe
+9) AsyncPipe
+10) KeyValuePipe
+11) JsonPipe
+12) LowerCasePipe
+13) UpperCasePipe
+14) DecimalPipe
+15) CurrencyPipe  
+16) PercentPipe
+17) SlicePipe
+18) AsyncPipe 
+19) KeyValuePipe
+20) JsonPipe -->
+
+
+
+
+DATA FLOW:
+===============
+HTML->TS-> Service->API
+
+
+API Integration:
+================
+0) create vehicle component and service
+1) Import HttpClientModule
+2) Inject HttpClient in vehicle service
+    write a get method to hit API
+3) API call is observable so 
+  subscribe it in ts to read data
+
+
+
+
+All Possible API Calls
+=====================
+1) all           GET        get(URL)
+2) specific      GET        get(URL/id)
+2) filter        GET        get(URL?flter=red)
+3) pagination    GET        get(URL?limit=10&page=1)
+4) sort          GET        get(URL?sortBy=color&order=asc(or desc))
+
+5) create        POST       post(URL,data)
+6) update        PUT        put(URL/id,data)
+7) delete        DELETE     delete(URL/id)
+
+
+
+GIT
+===
+
+1) Link laptop wit github website
+
+  git config --global user.name "xxxxxxxx"
+  git config --global user.email "xxxxxxxx"
+    check: git config --list
+
+2) Link project with repository
+  git init
+  git remote add origin URL
+    check: git remote -v
+
+
+3) sunc code
+  git add .
+  git commit -m "message"
+  git push
 
 

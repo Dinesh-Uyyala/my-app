@@ -1,0 +1,17 @@
+<h1>IMDB</h1>
+
+<div class="row">
+  <div class="card bg-dark text-white" style="width: 20rem;" *ngFor="let movie of movies">
+    <img class="card-img-top" src="{{movie.image}}" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.movie}}</h5>
+      <!-- <p class="card-text">{{movie.description}}</p> -->
+      <p class="card-text">Rating: {{movie.rating}}
+        <span *ngFor="let star of getStars(movie.rating)">
+          {{star}} <!-- Display star character -->
+        </span>
+      </p>
+      <a href="{{movie.imdb_url}}" class="btn btn-primary">View on IMDB</a>
+    </div>
+  </div>
+</div>

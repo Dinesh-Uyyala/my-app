@@ -1,0 +1,21 @@
+Day 1
+
+angular installation
+App Creation
+Component Creation
+Routings
+Creating a sidebar website model with child routing
+
+Day 2
+
+Data Binding
+    Interpolation
+    Property Binding
+    Event Binding
+    Two Way Data Binding  
+      Simple calculator app covering Interpolation,Eventbinding, Property Binding and two Way data Binding
+
+Directives
+    *ngFor
+      took array and arrayof objects give examples on dropdown, list and table
+Structural Directives
