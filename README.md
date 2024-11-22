@@ -146,5 +146,7 @@ GIT
   git add .
   git commit -m "message"
   git push
+    git push --set-upstream origin master -f //first time & -f means forcefully
+    
 
 
