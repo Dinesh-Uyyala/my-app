@@ -148,5 +148,13 @@ GIT
   git push
     git push --set-upstream origin master -f //first time & -f means forcefully
 
-
+4) Create branch  and do pull requests
+  create branch from github
+    check git fetch
+  check current branch 
+    check git branch
+  checkout to new branch
+    check git checkout <branch name>
+    check git branch
+  
 
