@@ -142,11 +142,11 @@ GIT
     check: git remote -v
 
 
-3) sunc code
+3) sync code
   git add .
   git commit -m "message"
   git push
     git push --set-upstream origin master -f //first time & -f means forcefully
-    
+
 
 
