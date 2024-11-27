@@ -1,0 +1,37 @@
+<p>dummy works!</p>
+<div matBadge="4" matBadgeOverlap="false" matBadgePosition="below" class="demo-section">Text with a badge</div>
+
+<div matBadge="1" matBadgeSize="large" matBadgePosition="before" class="demo-section">Text with large badge</div>
+
+<div class="demo-section">
+  Button with a badge on the left
+  <button mat-raised-button color="primary"
+      matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+    Action
+  </button>
+</div>
+
+<div class="demo-section">
+    Button toggles badge visibility
+    <button mat-raised-button matBadge="7" [matBadgeHidden]="hidden" (click)="toggleBadgeVisibility()">
+        Hide
+    </button>
+  </div>
+
+<div class="demo-section">
+  Icon with a badge
+  <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+    <!-- Include text description of the icon's meaning for screen-readers -->
+    <span class="cdk-visually-hidden">
+      Example with a home icon with overlaid badge showing the number 15
+    </span>
+</div>
+
+<mat-form-field appearance="fill">
+  <mat-label>Choose a date</mat-label>
+  <input matInput [matDatepicker]="picker">
+  <mat-hint>MM/DD/YYYY</mat-hint>
+  <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
