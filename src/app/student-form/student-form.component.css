@@ -1,0 +1,15 @@
+label
+{
+  width:130px;
+  margin:10px;
+}
+
+card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+mat-divider{
+  border-color: brown;
+  border-width: 10px;
+}

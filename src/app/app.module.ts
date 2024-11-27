@@ -24,6 +24,19 @@ import { BlogComponent } from './blog/blog.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { StudentIdComponent } from './student-id/student-id.component';
+import { TodoComponent } from './todo/todo.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DummyComponent } from './dummy/dummy.component';
+import { MatIconModule } from "@angular/material/icon";
+import { MatBadgeModule } from "@angular/material/badge";
+import { MatButtonModule } from "@angular/material/button";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatDatepickerModule } from "@angular/material/datepicker";
+import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
+import { MatDividerModule } from "@angular/material/divider";
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,14 +58,25 @@ import { StudentIdComponent } from './student-id/student-id.component';
     BlogComponent,
     CreateVehicleComponent,
     PokemonComponent,
-    StudentIdComponent
+    StudentIdComponent,
+    TodoComponent,
+    DummyComponent,
+    CreateUserComponent,
+    StudentFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatButtonModule,
+    MatFormFieldModule,
+    MatDatepickerModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

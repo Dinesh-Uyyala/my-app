@@ -19,11 +19,16 @@ import { BlogComponent } from './blog/blog.component';
 import { CreateVehicleComponent } from './create-vehicle/create-vehicle.component';
 import { PokemonComponent } from './pokemon/pokemon.component';
 import { StudentIdComponent } from './student-id/student-id.component';
+import { TodoComponent } from './todo/todo.component';
+import { DummyComponent } from './dummy/dummy.component';
+import { CreateUserComponent } from './create-user/create-user.component';
+import { StudentFormComponent } from './student-form/student-form.component';
 
 const routes: Routes = [
   {path:'',component:LoginComponent},
   {path:'login',component:LoginComponent},
   {path:'dashboard',component:DashboardComponent,children:[
+    {path:'dummy',component:DummyComponent},
     {path:'home',component:HomeComponent},
     {path:'calculator',component:CalculatorComponent},
     {path:'data-binding',component:DataBindingComponent},
@@ -36,6 +41,9 @@ const routes: Routes = [
     {path:'flipkart',component:FlipkartComponent},
     {path:'imdb',component:ImdbComponent},
     {path:'blog',component:BlogComponent},
+    {path:'todo',component:TodoComponent},
+    {path:'create-user',component:CreateUserComponent},
+    {path:'student-form',component:StudentFormComponent},
     {path:'student-id',component:StudentIdComponent},
     {path:'pokemon',component:PokemonComponent},
     {path:'weather',component:WeatherComponent},

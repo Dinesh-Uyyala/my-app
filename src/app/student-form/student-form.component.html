@@ -1,0 +1,158 @@
+<!-- <p>Section 1</p>
+<mat-divider></mat-divider>
+<p>Section 2</p>
+
+<h1>Hello</h1>
+<mat-divider></mat-divider>
+<h2>Hi</h2> -->
+
+<div class="card">
+  <h1>Add Student Form</h1>
+  <form [formGroup]="userForm">
+    <label for="">Name:</label>
+    <input type="text" placeholder="Enter your name" formControlName="name" />
+    <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
+      <p class="error" *ngIf="userForm.get('name')?.errors?.['required']">
+        Name is Required
+      </p>
+      <p class="error" *ngIf="userForm.get('name')?.errors?.['minLength']">
+        Minimum 3 characters
+      </p>
+      <p class="error" *ngIf="userForm.get('name')?.errors?.['maxLength']">
+        Maximum 10 characters
+      </p>
+    </div>
+    <br />
+
+    <label for="">Age:</label>
+    <input type="number" placeholder="Enter your Class" formControlName="class" />
+    <div *ngIf="userForm.get('class')?.touched && userForm.get('class')?.invalid">
+      <p class="error" *ngIf="userForm.get('class')?.errors?.['required']">
+        Name is Required
+      </p>
+      <p class="error" *ngIf="userForm.get('class')?.errors?.['min']">
+        Minimum 18 years
+      </p>
+      <p class="error" *ngIf="userForm.get('class')?.errors?.['max']">
+        Maximum 60 years
+      </p>
+    </div>
+    <br />
+
+    <label for="">Email:</label>
+    <input type="text" placeholder="Enter your Email" formControlName="email" />
+    <br />
+
+    <label for="">Father Name:</label>
+    <input
+      type="text"
+      placeholder="Enter your Father Name"
+      formControlName="fatherName"
+    />
+    <br />
+
+    <label for="">DOB:</label>
+    <input
+      type="date"
+      placeholder="Enter your Date of Birth"
+      formControlName="dob"
+    />
+    <br />
+
+    <div formGroupName="address">
+      <label for="">Address Line:</label>
+      <input
+        type="text"
+        placeholder="Enter your Address"
+        formControlName="addressLine"
+      />
+      <br />
+
+      <label for="">City:</label>
+      <input
+        type="text"
+        placeholder="Enter your City"
+        formControlName="city"
+      />
+      <br />
+
+      <label for="">State:</label>
+      <input
+        type="text"
+        placeholder="Enter your State"
+        formControlName="state"
+      />
+      <br />
+
+      <label for="">Pin:</label>
+      <input
+        type="Number"
+        placeholder="Enter your Pincode"
+        formControlName="pincode"
+      />
+      <br />
+    </div>
+
+    <label for="">Type:</label>
+    <input type="radio" name="type" formControlName="type" value="dayScholor" />
+    <label for="">Dayscholar</label>
+    <input
+      type="radio"
+      name="type"
+      formControlName="type"
+      value="residential"
+    />
+    <label for="">Residential</label>
+    <br />
+
+    <div *ngIf="userForm.get('type')?.value == 'dayScholor'">
+      <label for="">Bus Fee:</label>
+      <input
+        type="number"
+        formControlName="busFee"
+        placeholder="Please Enter Bus Fee"
+      />
+      <br />
+    </div>
+
+    <div *ngIf="userForm.get('type')?.value == 'residential'">
+      <label for="">Hostel Fee:</label>
+      <input
+        type="number"
+        formControlName="hostelFee"
+        placeholder="Please Enter Hostel Fee"
+      />
+      <br />
+    </div>
+
+    <label for="">Marks:</label>
+    <button class="btn btn-info" (click)="addMarks()">Add Marks</button>
+    <br />
+    <div formArrayName="marks">
+      <div *ngFor="let card of marksFormArray.controls; let i = index">
+        <div formGroupName="{{ i }}">
+          <h2>Marks {{ i + 1 }}</h2>
+          <label for="">Class:</label>
+          <input type="text" formControlName="class" />
+          <br />
+
+          <label for="">Year:</label>
+          <input type="month" formControlName="year" />
+          <br />
+
+          <label for="">Percentage:</label>
+          <input type="number" formControlName="percentage" />
+          <br />
+
+          <button class="btn btn-danger" (click)="deleteMarks(i)">
+            <mat-icon>delete</mat-icon>
+          </button>
+
+          <hr />
+        </div>
+      </div>
+    </div>
+
+    <button class="btn btn-warning" (click)="submit()">Submit</button>
+  </form>
+</div>
