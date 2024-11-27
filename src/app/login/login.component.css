@@ -1,7 +1,73 @@
-form{
-  justify-content: center;
-  align-items: center;
+/* Parent container styling */
+.parent {
   display: flex;
-  flex-direction: column;
-  margin: auto;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  height: 100vh; /* Full viewport height */
+  background-color: #f5f5f5; /* Light gray background */
+  font-family: Arial, sans-serif;
+}
+
+/* Form container styling */
+form {
+  background-color: #ffffff; /* White background */
+  padding: 20px 30px; /* Inner padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  width: 300px; /* Fixed width */
+}
+
+/* Label styling */
+label {
+  font-weight: bold; /* Bold labels */
+  margin-bottom: 8px; /* Spacing below label */
+  display: block; /* Ensures label is above input */
+  color: #333; /* Dark text color */
+}
+
+/* Input field styling */
+input {
+  width: 100%; /* Full width of form */
+  padding: 10px; /* Inner padding */
+  margin-bottom: 15px; /* Spacing between fields */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 4px; /* Rounded corners */
+  box-sizing: border-box; /* Ensures padding is included in width */
+  font-size: 14px;
+}
+
+/* Button styling */
+button {
+  width: 100%; /* Full width of form */
+  padding: 10px; /* Inner padding */
+  background-color: #007bff; /* Blue background */
+  color: #fff; /* White text */
+  border: none; /* No border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Larger text */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Forgot password link */
+h6 a {
+  text-decoration: none; /* Remove underline */
+  color: #007bff; /* Blue link */
+  font-size: 14px; /* Smaller text */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+h6 a:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+/* Horizontal rule styling */
+hr {
+  border: none; /* Remove default border */
+  border-top: 1px solid #ddd; /* Light gray top border */
+  margin: 15px 0; /* Spacing above and below */
 }
